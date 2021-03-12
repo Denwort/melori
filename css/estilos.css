@@ -1,0 +1,270 @@
+video {
+    display: none;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+ 	transform: translate(-50%,-50%);
+ 	z-index: -1;
+ 	object-fit: cover;
+}
+
+body{
+	background: #fff;
+}
+
+#swapMuted{
+    width: 8vmin;
+    height: 4vmin;
+    text-align: center;
+    margin: 0 auto;
+    display: none;
+    font-size: 1.5vmin;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.box{
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.inicio{
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	height: 100px;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index:0 ;
+    font-family: "Arial";
+    font-size: 3.5vmin;
+    font-weight: bold;
+    color: #2292A4;
+    text-align: center;
+}
+
+#etiqueta{
+	display: none;
+	margin-top: 150px;
+}
+
+#btnPlayPause{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 128px;
+	height: 128px;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 50%;
+    background: url(../recursos/playw.png) no-repeat;
+    cursor: pointer;
+    border-style: none;
+    display: none;
+    transition: all 0.7s ease;
+}
+
+#btnPlayPause:hover{
+    transform: scale(1.2) translate(-53px, -53px);
+}
+
+input:focus , textarea:focus{
+    outline: none;
+}
+
+.opciones{
+	display: none;
+	margin: 0;
+	padding-top: 2vmin;
+	padding-bottom: 2vmin;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index:0 ;
+    font-family: "Arial";
+    font-size: 4vmin;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    color: #E5E5E5;
+    background: #2292A4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.opciones:hover{
+	font-size: 4.5vmin;
+}
+
+#q1a1{
+	margin-top: -15vmin;
+    cursor: text;
+    padding-right: -20vmin;
+    padding-left: -20vmin;
+
+}
+#q1a2{
+    cursor: text;
+
+}
+#q1a3{
+	margin-top: 15vmin;
+    padding-right: 3vmin;
+    padding-left: 3vmin;
+    cursor: text;
+}
+
+#continuarDatos{
+    margin-top: 30vmin;
+    padding-right: 3vmin;
+    padding-left: 3vmin;
+}
+
+
+#q2a1{
+	margin-top: -15vmin;
+}
+#q2a2{
+    margin-top: -5vmin;
+}
+#q2a3{
+    margin-top: 5vmin;
+}
+#q2a4{
+    margin-top: 15vmin;
+}
+#q2a5{
+    margin-top: 25vmin;
+}
+#q2a6{
+	margin-top: 35vmin;
+}
+
+
+#q3a1{
+	margin-top: -20vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+#q3a2{
+    margin-top: -12vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+#q3a3{
+	margin-top: -4vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+#q3a4{
+    margin-top: 4vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+#q3a5{
+    margin-top: 12vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+#q3a6{
+    margin-top: 20vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+#q3a7{
+    margin-top: 28vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+#q3a8{
+    margin-top: 36vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+    cursor: text;
+}
+#continuarDistritos{
+    margin-top: 44vmin;
+    padding-right: 3vmin;
+    padding-left: 3vmin;
+    padding-top: 1vmin;
+    padding-bottom: 1vmin;
+}
+
+
+#q4a1{
+	margin-top: -15vmin;
+}
+#q4a2{
+    margin-top: -5vmin;
+}
+#q4a3{
+	margin-top: 5vmin;
+}
+#q4a4{
+    margin-top: 15vmin;
+}
+
+#gracias{
+    display: none;
+    margin: 0;
+    left: 5px;
+    bottom: 5px;
+    position: absolute;
+    z-index:0 ;
+    font-family: "Arial";
+    font-size: 4vmin;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+#ansPeor{
+    resize: none;
+    padding-right: 3vmin;
+    padding-left: 3vmin;
+    cursor: text;
+}
+
+.submit{
+	display: none;
+	margin: 0;
+    margin-top: 30vmin;
+	padding: 3vmin 3vmin 3vmin 3vmin;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index:0 ;
+    font-family: "Arial";
+    font-size: 4vmin;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5%;
+    border: none;
+    color: #E5E5E5;
+    background: #2292A4;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit:hover{
+    font-size: 4.5vmin; 
+}

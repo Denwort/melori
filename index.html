@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Experiencia</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body style="margin: 0;">
+	
+
+  <div id="box">
+
+	<audio id="musica" preload loop>
+   		<source src="recursos/audio.mp3" type="audio/mp3">
+	</audio>
+  	<video id="video" preload onended="mostrarBotones();"> 
+			<source src="recursos/video1.mp4" type="video/mp4">
+				</video >
+	<video id="video2" preload onended="mostrarBotones();"> 
+			<source src="recursos/video2.mp4" type="video/mp4">
+				</video >
+				
+  <button onclick="checkMuted()" id="swapMuted">Mute</button>
+
+  <input type="button" id="btnPlayPause" onclick="empezar()">
+  <label class="inicio" id="etiqueta">Click para empezar la experiencia</label>
+  
+
+<form method="POST" name="google-sheet" autocomplete="off" >
+
+	 <button type=submit onclick="return false;" style="display:none;"></button>
+
+	<!-- Datos -->
+	<input type="text" placeholder="Nombre" class="opciones" id="q1a1" name="Nombre">
+	<input type="text" placeholder="Apellido" class="opciones" id="q1a2" name="Apellido" min="1900-01-01">
+	<input type="date" class="opciones" id="q1a3" name="Nacimiento">
+	<input type="button" class="opciones" value="Continuar" id="continuarDatos" onclick="ocultarBotones(['q1a1','q1a2','q1a3','continuarDatos'],1);">
+
+	<!-- Presupuesto -->
+	<input type="text" readonly value="<600" class="opciones" id="q2a1" name="Presupuesto" onclick="ocultarBotones(['q2a1','q2a2','q2a3','q2a4','q2a5','q2a6'],2)">
+	<input type="text" readonly value="600-800" class="opciones" id="q2a2" name="Presupuesto" onclick="ocultarBotones(['q2a1','q2a2','q2a3','q2a4','q2a5','q2a6'],2)">
+	<input type="text" readonly value="800-1000" class="opciones" id="q2a3" name="Presupuesto" onclick="ocultarBotones(['q2a1','q2a2','q2a3','q2a4','q2a5','q2a6'],2)">
+	<input type="text" readonly value="1000-1200" class="opciones" id="q2a4" name="Presupuesto" onclick="ocultarBotones(['q2a1','q2a2','q2a3','q2a4','q2a5','q2a6'],2)">
+	<input type="text" readonly value="1200-1400" class="opciones" id="q2a5" name="Presupuesto" onclick="ocultarBotones(['q2a1','q2a2','q2a3','q2a4','q2a5','q2a6'],2)">
+	<input type="text" readonly value=">1400" class="opciones" id="q2a6" name="Presupuesto" onclick="ocultarBotones(['q2a1','q2a2','q2a3','q2a4','q2a5','q2a6'],2)">
+
+	<!-- Distritos -->
+	<input type="text" readonly class="opciones" id="ansDistritos" name="Distritos">
+	<input type="text" readonly value="La Molina" class="opciones" id="q3a1" onclick="seleccionado(this.id)">
+	<input type="text" readonly value="Surco" class="opciones" id="q3a2" onclick="seleccionado(this.id)">
+	<input type="text" readonly value="San Borja" class="opciones" id="q3a3" onclick="seleccionado(this.id)">
+	<input type="text" readonly value="San Isidro" class="opciones" id="q3a4" onclick="seleccionado(this.id)">
+	<input type="text" readonly value="Miraflores" class="opciones" id="q3a5" onclick="seleccionado(this.id)">
+	<input type="text" readonly value="Surquillo" class="opciones" id="q3a6" onclick="seleccionado(this.id)">
+	<input type="text" readonly value="Barranco" class="opciones" id="q3a7" onclick="seleccionado(this.id)">
+	<input type="text" placeholder="Otros" class="opciones" id="q3a8" onkeyup="verificaCaracteres()">
+
+	<input type="button" class="opciones" value="Continuar" id="continuarDistritos" onclick="agruparDistritos(); ocultarBotones(['q3a1','q3a2','q3a3','q3a4','q3a5','q3a6','q3a7','q3a8','continuarDistritos'],3)">
+
+	<!-- Tiempo -->
+	<input type="text" readonly value="1 mes o menos" class="opciones" id="q4a1" name="Tiempo" onclick="ocultarBotones(['q4a1','q4a2','q4a3','q4a4'],4)">
+	<input type="text" readonly value="2-3 meses" class="opciones" id="q4a2" name="Tiempo" onclick="ocultarBotones(['q4a1','q4a2','q4a3','q4a4'],4);">
+	<input type="text" readonly value="4-5 meses" class="opciones" id="q4a3" name="Tiempo" onclick="ocultarBotones(['q4a1','q4a2','q4a3','q4a4'],4);">
+	<input type="text" readonly value="6 o más meses" class="opciones" id="q4a4" name="Tiempo" onclick="ocultarBotones(['q4a1','q4a2','q4a3','q4a4'],4);">	
+
+	<!-- Peor --> 
+	<textarea rows="7" cols="30" class="opciones" id="ansPeor" name="Peor"></textarea>
+	<input type="submit" value="Finalizar" class="submit" id="submit" name="finalizar" onclick="ocultarBotones(['ansPeor','submit'],5); this.style.display='none';">
+
+</form>
+
+	<!-- Final -->
+	<label id="gracias">Gracias</label>
+
+
+</div>
+	<script type="text/javascript" src="js/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>
